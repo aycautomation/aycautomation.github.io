@@ -21,32 +21,31 @@ timezone:
 
 title: AYC Automation                          # the main title
 
-tagline: How-to's, tips, guides, and more   # it will display as the sub-title
+tagline: How-to's, tips, guides for industrial automation   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A blog focused on helpful industrial automation tutorials.
-
+  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://blog.aycautomation.com'
+url: ''
 
 github:
   username: aycautomation             # change to your github username
 
-#twitter:
-#  username: twitter_username            # change to your twitter username
+twitter:
+  username: twitter_username            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Andrew Choe
-  email: andrew@aycautomation.com            # change to your email address
+  email: andrew@aycautomation.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/aykchoe      # change to your github homepage
+    # - https://twitter.com/username      # change to your twitter homepage
+    # - https://github.com/aycautomation       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-     - https://www.linkedin.com/in/aykchoe
+    - https://www.linkedin.com/in/aykchoe
 
 google_site_verification:               # fill in to your verification string
 
