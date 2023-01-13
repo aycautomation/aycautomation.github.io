@@ -2,7 +2,7 @@
 title: How To Work With 90-30 PLCs
 date: 2023-01-09 00:00:00 -0800
 categories: [PLC, GE]
-tags: [plc, ge, "9030", logicmaster, legacy]     # TAG names should always be lowercase
+tags: [plc, ge, "9030", logicmaster, legacy, howto]     # TAG names should always be lowercase
 ---
 
 The GE Series 90-30 PLC became obsolete in 2018, but there are still sites that use it in production today. I recently got to work with one to make a backup of the program, and make some programming changes. I wanted to create this guide to put everything I learned in one place and give credit to those who helped along the way!
@@ -64,7 +64,7 @@ They have a couple different DB9 to 15-pin SNP cables. I got the cheaper one wit
 
 And to put it all together, below is a diagram of how I set it up.
 
-![diagram](/assets/diagram.png)
+![diagram](/assets/2023-01-09-How-To-Work-With-90-30-PLCs/diagram.png)
 *Diagram of setup from PC to 90-30 PLC*
 
 ## How to Connect to a 90-30 PLC
@@ -109,7 +109,7 @@ https://emerson-mas.force.com/communities/en_US/Article/PLC-Serial-Com-Test-Tool
 
 It is supposed to auto detect the serial COM port and settings.
 
-![logicmaster_commands](/assets/logicmaster_commands.png)
+![logicmaster_commands](/assets/2023-01-09-How-To-Work-With-90-30-PLCs/logicmaster_commands.png)
 
 ### Connect to the PLC
 
