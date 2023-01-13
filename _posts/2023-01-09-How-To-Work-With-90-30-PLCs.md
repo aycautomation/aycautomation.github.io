@@ -16,18 +16,18 @@ This guide will show you:
 6. How to edit
 7. How to download
 
-## Required Tools and Software
+# Required Tools and Software
 
 1. Programming software
 2. Windows XP computer or VM
 3. Serial port/USB to DB9 adapter
 4. DB9 to SNP converter
 
-## How to Set Up the Environment
+# How to Set Up the Environment
 
 The setup is the most important part of this exercise. I’ve read through all the reddit, PLCS.net, and Emerson support site articles and here’s how I did it.
 
-### Programming Software
+## Programming Software
 
 90-30 PLCs can be programmed with either one of two software packages:
 1. Logicmaster v.9.05
@@ -42,17 +42,17 @@ Here’s a matrix I found on Emerson’s support site to map one to the other:
 
 In my case, I had a print of the ladder logic and realized I needed Logicmaster. I also tried to connect with Machine Edition to be able to convert the project - that's when I went down the rabbit hole of revision and firmware when I failed to connect to the PLC with Machine Edition.
 
-### Windows XP computer or VM
+## Windows XP computer or VM
 
 Many sources stated Logicmaster needs to be used in DOS or Windows XP. I was able to install Logicmaster with no hiccups. However, just for the fun of it I tried to install it on my Windows 10 VM and different compatibility modes, but it failed.
 
-### Serial port/USB to DB9 adapter
+## Serial port/USB to DB9 adapter
 
 There were several sources online that said you need to have a real serial port. If you have one, great, but I didn’t, so I tried a UC232 cable I had on hand. I wasn’t having success, and just to be safe, ordered a Keyspan USA-19HS from Amazon, which I know works with other older devices well. There are a lot of counterfeit USB to DB9 adapters out there and the Keyspan has always worked for me. Just be sure to download the correct driver and install it with the adapter unplugged first.
 
 <a href="https://www.tripplite.com/keyspan-high-speed-usb-to-serial-adapter~usa19hs" target="_blank" rel="noopener noreferrer">Keyspan USB to Serial Adapter</a>
 
-### DB9 to SNP Converter
+## DB9 to SNP Converter
 
 I found PLCCables.com through Ebay and saw a lot of the (owner's, I presume) comments on PLCS.net. They sell a lot of different.. PLC cables.
 
@@ -67,7 +67,7 @@ And to put it all together, below is a diagram of how I set it up.
 ![diagram](/assets/2023-01-09-How-To-Work-With-90-30-PLCs/diagram.png)
 *Diagram of setup from PC to 90-30 PLC*
 
-## How to Connect to a 90-30 PLC
+# How to Connect to a 90-30 PLC
 
 After you have your setup, you need to see if you can connect to the PLC.
 
@@ -76,7 +76,8 @@ Some important steps here are:
 2. Check your serial comm settings
 3. Check your 90-30 PLC comm settings
 4. Connect to the PLC
-### Make sure serial adapter driver is installed on Windows XP
+
+## Make sure serial adapter driver is installed on Windows XP
 If you have the Keyspan USA-19HS adapter like I do, they will have the driver on their website under Documents & Downloads.
 
 https://www.tripplite.com/keyspan-high-speed-usb-to-serial-adapter~usa19hs
@@ -87,7 +88,7 @@ After install, restart your VM and connect the adapter.
 
 Make sure the adapter connects to your VM by going to VM->Removable Devices->*Your serial adapter*->Connect (Disconnect from Host)
 
-### Check your serial comm settings
+## Check your serial comm settings
 
 To check your serial comm settings, open Device Manager. On Windows XP, right click ‘My Computer’->Properties->Hardware tab->Device Manager
 
@@ -101,7 +102,7 @@ Next, click ‘Advanced…’
 
 Here, change the COM Port number to COM1. I tried COM3, and it did not work for me.
 
-### Check your 90-30 PLC comm settings
+## Check your 90-30 PLC comm settings
 
 If you don’t know the serial settings for your 90-30 PLC, and the default settings do not work, you can try this tool from GE/Emerson.
 
@@ -111,7 +112,7 @@ It is supposed to auto detect the serial COM port and settings.
 
 ![logicmaster_commands](/assets/2023-01-09-How-To-Work-With-90-30-PLCs/logicmaster_commands.png)
 
-### Connect to the PLC
+## Connect to the PLC
 
 After all your settings are set, and your cables are connected, we can attempt connecting.
 
@@ -133,7 +134,7 @@ The PLC may automatically connect. If not, press F7 to go to setup, then F4 to g
 
 Next, ESC, then F2 to Set Prgmr Mode. Press TAB to go to MONITOR or ONLINE, then press enter. If successful, you should see the scan time cycling at the bottom, else, ‘NO COMMUNICATIONS’ will be displayed.
 
-## How to Change Mode
+# How to Change Mode
 
 There are 3 modes. Offline, Monitor, and Online.
 
@@ -145,7 +146,7 @@ Online, you can make changes to the logic, configuration, and values.
 
 To quickly change the mode, use the shortcut ALT-M
 
-## How to Upload (PLC to PC)
+# How to Upload (PLC to PC)
 
 To upload from the PLC to the programmer:
 
@@ -159,7 +160,7 @@ F1 to upload from the PLC to the programmer.
 
 Here, you can select what to upload. (Logic, configuration, reference tables)
 
-## How to Edit
+# How to Edit
 
 Open Logicmaster.
 
@@ -173,7 +174,7 @@ F1 to insert or F2 to edit or F3 to modify in place.
 
 Here, different instructions will be shown. More instructions are available with SHIFT-Function Keys. For example SHIFT-F6 will show the ‘move’ command.
 
-## How to Download (PC to PLC)
+# How to Download (PC to PLC)
 
 From the Logicmaster 90 Programmer Package, F9 to the Utility: Load/Store/etc.
 
@@ -185,10 +186,10 @@ Make sure the PLC is in ONLINE mode (ALT-M to change modes)
 
 A RUN MODE STORE will temporarily pause the PLC while it downloads.
 
-## Other helpful information
+# Other helpful information
 Copy and paste between VM and host
 
-## Credit
+# Credit
 * Emerson distributor - CB Pacific - Tim Burkett
 * PLCS.net - Steve Bailey numerous posts
 * PLCCable.com
